@@ -1,0 +1,34 @@
+<div class="container calc-wrapper">
+  <div class="row">
+  <div class="col-lg-12">
+      <div class="btn-group btn-group-lg col-lg-offset-3" style="padding-bottom:20px;">
+          <button type="button" class="btn btn-primary" (click)="operation('+')">+</button>
+          <button type="button" class="btn btn-primary" (click)="operation('-')">-</button>
+          <button type="button" class="btn btn-primary" (click)="operation('*')">*</button>
+          <button type="button" class="btn btn-primary" (click)="operation('/')">/</button>
+          <button type="button" class="btn btn-primary" (click)="clear()">C</button>
+          <button type="button" class="btn btn-primary" (click)="getResult()">=</button>
+          
+      </div>
+      <h4 class="form-group result">
+          {{(number1 && number2 && sign)? (number1 || ''):''}}
+          {{(number1 && number2 && sign)? (sign || ''):''}}
+          {{(number1 && number2 && sign)? (number2 || ''):''}}
+          {{result? '= ' + result:''}}
+      </h4>
+  </div> 
+  
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <input type="number" [(ngModel)]="number1" (ngModelChange)="onNumbersChange()" class="form-control">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <input type="number" [(ngModel)]="number2"  (ngModelChange)="onNumbersChange()" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>

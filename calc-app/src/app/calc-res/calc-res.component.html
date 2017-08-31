@@ -1,0 +1,11 @@
+
+<div class="container calc-res-wrapper">
+    <div class="row">
+        <div class="col-lg-12" >
+           <h3 class="" style="color:white; padding-left:155px; padding-bottom:20px;">Result is: {{result || ''}}</h3>
+        </div>
+      <div class="col-lg-12">
+          <app-calc (onCalculated)="onCalculated($event)"></app-calc>
+      </div>
+    </div>
+</div>
